@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<fieldset
+		name="joomla-v4-component"
+		label="COM_JOOMLA-V4-COMPONENTS_FIELD_CONFIG_INDIVIDUAL_JOOMLA-V4-COMPONENT_DISPLAY"
+		description="COM_JOOMLA-V4-COMPONENTS_FIELD_CONFIG_INDIVIDUAL_JOOMLA-V4-COMPONENT_DESC"
+		>
+		<field
+			name="show_joomla-v4-component_name_label"
+			type="list"
+			label="COM_JOOMLA-V4-COMPONENTS_FIELD_JOOMLA-V4-COMPONENT_SHOW_CATEGORY_LABEL"
+			default="1"
+			>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+
+		<field
+			name="custom_fields_enable"
+			type="radio"
+			class="switcher"
+			label="JGLOBAL_CUSTOM_FIELDS_ENABLE_LABEL"
+			default="1"
+			>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+
+		<field
+			name="show_name"
+			type="radio"
+			label="COM_JOOMLA-V4-COMPONENTS_FIELD_PARAMS_NAME_LABEL"
+			default="1"
+			class="switcher"
+			>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+	</fieldset>
+	<fieldset
+		name="permissions"
+		label="JCONFIG_PERMISSIONS_LABEL"
+		description="JCONFIG_PERMISSIONS_DESC"
+		>
+		<field
+			name="rules"
+			type="rules"
+			label="JCONFIG_PERMISSIONS_LABEL"
+			validate="rules"
+			filter="rules"
+			component="com_joomla-v4-components"
+			section="component"
+		/>
+	</fieldset>
+</config>
