@@ -41,9 +41,12 @@ if ($saveOrder && !empty($this->items))
 				<?php echo $this->sidebar; ?>
             </div>
 		<?php endif; ?>
-        <div class="<?php if (!empty($this->sidebar)) {
+        <div class="<?php if (!empty($this->sidebar))
+		{
 			echo 'col-md-10';
-		} else {
+		}
+		else
+		{
 			echo 'col-md-12';
 		} ?>">
             <div id="j-main-container" class="j-main-container">
