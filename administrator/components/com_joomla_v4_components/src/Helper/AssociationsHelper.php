@@ -103,47 +103,6 @@ class AssociationsHelper extends AssociationExtensionHelper
 	}
 
 	/**
-	 * Get item information
-	 *
-	 * @param   string  $typeName  The item type
-	 * @param   int     $id        The id of item for which we need the associated items
-	 *
-	 * @return  Table|null
-	 *
-	 * @since   1.0.0
-	 */
-	public function getItem($typeName, $id)
-	{
-		if (empty($id))
-		{
-			return null;
-		}
-
-		$table = null;
-
-		switch ($typeName)
-		{
-			case 'joomla_v4_component':
-				$table = Table::getInstance('Joomla_v4_componentTable',
-					'Joomla\\Component\\Joomla_v4_components\\Administrator\\Table\\');
-				break;
-
-			case 'category':
-				$table = Table::getInstance('Category');
-				break;
-		}
-
-		if (empty($table))
-		{
-			return null;
-		}
-
-		$table->load($id);
-
-		return $table;
-	}
-
-	/**
 	 * Get information about the type
 	 *
 	 * @param   string  $typeName  The item type
@@ -234,6 +193,47 @@ class AssociationsHelper extends AssociationExtensionHelper
 			//	'checked_out'         => 'a.checked_out',
 			//	'checked_out_time'    => 'a.checked_out_time'
 		];
+	}
+
+	/**
+	 * Get item information
+	 *
+	 * @param   string  $typeName  The item type
+	 * @param   int     $id        The id of item for which we need the associated items
+	 *
+	 * @return  Table|null
+	 *
+	 * @since   1.0.0
+	 */
+	public function getItem($typeName, $id)
+	{
+		if (empty($id))
+		{
+			return null;
+		}
+
+		$table = null;
+
+		switch ($typeName)
+		{
+			case 'joomla_v4_component':
+				$table = Table::getInstance('Joomla_v4_componentTable',
+					'Joomla\\Component\\Joomla_v4_components\\Administrator\\Table\\');
+				break;
+
+			case 'category':
+				$table = Table::getInstance('Category');
+				break;
+		}
+
+		if (empty($table))
+		{
+			return null;
+		}
+
+		$table->load($id);
+
+		return $table;
 	}
 }
 

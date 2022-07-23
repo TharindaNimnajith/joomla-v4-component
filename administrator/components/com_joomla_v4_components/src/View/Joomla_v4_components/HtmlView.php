@@ -34,37 +34,12 @@ use Joomla\Component\Joomla_v4_components\Administrator\Model\Joomla_v4_componen
 class HtmlView extends BaseHtmlView
 {
 	/**
-	 * An array of items
-	 *
-	 * @var    array
-	 * @since  1.0.0
-	 */
-	protected $items = [];
-
-	/**
-	 * The pagination object
-	 *
-	 * @var    Pagination
-	 * @since  1.0.0
-	 */
-	protected $pagination;
-
-	/**
-	 * The model state
-	 *
-	 * @var    CMSObject
-	 * @since  1.0.0
-	 */
-	protected $state;
-
-	/**
 	 * Form object for search filters
 	 *
 	 * @var    Form
 	 * @since  1.0.0
 	 */
 	public $filterForm;
-
 	/**
 	 * The active search filters
 	 *
@@ -72,7 +47,27 @@ class HtmlView extends BaseHtmlView
 	 * @since  1.0.0
 	 */
 	public $activeFilters = [];
-
+	/**
+	 * An array of items
+	 *
+	 * @var    array
+	 * @since  1.0.0
+	 */
+	protected $items = [];
+	/**
+	 * The pagination object
+	 *
+	 * @var    Pagination
+	 * @since  1.0.0
+	 */
+	protected $pagination;
+	/**
+	 * The model state
+	 *
+	 * @var    CMSObject
+	 * @since  1.0.0
+	 */
+	protected $state;
 	/**
 	 * The sidebar markup
 	 *
@@ -88,8 +83,8 @@ class HtmlView extends BaseHtmlView
 	 *
 	 * @return  void
 	 *
-	 * @since   1.0.0
 	 * @throws  Exception
+	 * @since   1.0.0
 	 */
 	public function display($tpl = null): void
 	{
@@ -149,8 +144,8 @@ class HtmlView extends BaseHtmlView
 	 *
 	 * @return  void
 	 *
-	 * @since   1.0.0
 	 * @throws  Exception
+	 * @since   1.0.0
 	 */
 	protected function addToolbar()
 	{

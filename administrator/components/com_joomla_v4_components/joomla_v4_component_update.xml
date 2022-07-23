@@ -12,6 +12,6 @@
         <maintainerurl>http://www.example.com</maintainerurl>
         <targetplatform name="joomla" version="4.0"/>
         <client>site</client>
-		<php_minimum>7.1</php_minimum>
+        <php_minimum>7.1</php_minimum>
     </update>
 </updates>

@@ -36,8 +36,8 @@ abstract class AssociationHelper extends CategoryAssociationHelper
 	public static function getAssociations($id = 0, $view = null)
 	{
 		$jinput = Factory::getApplication()->input;
-		$view = $view ?? $jinput->get('view');
-		$id = empty($id) ? $jinput->getInt('id') : $id;
+		$view   = $view ?? $jinput->get('view');
+		$id     = empty($id) ? $jinput->getInt('id') : $id;
 
 		if ($view === 'joomla_v4_components')
 		{

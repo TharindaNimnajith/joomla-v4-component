@@ -4,7 +4,9 @@ defined('_JEXEC') or die;
 use Joomla\CMS\Language\Text;
 
 ?>
-<button type="button" class="btn btn-secondary" onclick="document.getElementById('batch-category-id').value='';document.getElementById('batch-access').value='';document.getElementById('batch-language-id').value='';document.getElementById('batch-user-id').value='';document.getElementById('batch-tag-id').value=''" data-dismiss="modal">
+<button type="button" class="btn btn-secondary"
+        onclick="document.getElementById('batch-category-id').value='';document.getElementById('batch-access').value='';document.getElementById('batch-language-id').value='';document.getElementById('batch-user-id').value='';document.getElementById('batch-tag-id').value=''"
+        data-dismiss="modal">
 	<?php echo Text::_('JCANCEL'); ?>
 </button>
 <button type="submit" class="btn btn-success" onclick="Joomla.submitbutton('joomla_v4_component.batch');">

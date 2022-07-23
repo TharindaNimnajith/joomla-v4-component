@@ -92,9 +92,9 @@ class Com_Joomla_v4_componentsInstallerScript
 	 *
 	 * @return  boolean  True on success
 	 *
+	 * @throws Exception
 	 * @since  1.0.0
 	 *
-	 * @throws Exception
 	 */
 	public function preflight($type, $parent): bool
 	{

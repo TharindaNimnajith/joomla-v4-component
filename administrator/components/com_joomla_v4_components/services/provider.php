@@ -31,8 +31,7 @@ use Joomla\DI\ServiceProviderInterface;
  *
  * @since  1.0.0
  */
-return new class implements ServiceProviderInterface
-{
+return new class implements ServiceProviderInterface {
 	/**
 	 * Registers the service provider with a DI container.
 	 *
@@ -49,19 +48,18 @@ return new class implements ServiceProviderInterface
 		$container->registerServiceProvider(new CategoryFactory('\\Joomla\\Component\\Joomla_v4_components'));
 		$container->registerServiceProvider(new MVCFactory('\\Joomla\\Component\\Joomla_v4_components'));
 		$container->registerServiceProvider(new ComponentDispatcherFactory('\\Joomla\\Component\\Joomla_v4_components'));
-        $container->registerServiceProvider(new RouterFactory('\\Joomla\\Component\\Joomla_v4_components'));
+		$container->registerServiceProvider(new RouterFactory('\\Joomla\\Component\\Joomla_v4_components'));
 
 		$container->set(
 			ComponentInterface::class,
-			function (Container $container)
-			{
+			function (Container $container) {
 				$component = new Joomla_v4_componentsComponent($container->get(ComponentDispatcherFactoryInterface::class));
 
 				$component->setRegistry($container->get(Registry::class));
 				$component->setMVCFactory($container->get(MVCFactoryInterface::class));
 				$component->setCategoryFactory($container->get(CategoryFactoryInterface::class));
 				$component->setAssociationExtension($container->get(AssociationExtensionInterface::class));
-                $component->setRouterFactory($container->get(RouterFactoryInterface::class));
+				$component->setRouterFactory($container->get(RouterFactoryInterface::class));
 
 				return $component;
 			}

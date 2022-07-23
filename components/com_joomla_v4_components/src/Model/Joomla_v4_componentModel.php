@@ -40,7 +40,7 @@ class Joomla_v4_componentModel extends BaseDatabaseModel
 	public function getItem($pk = null)
 	{
 		$app = Factory::getApplication();
-		$pk = $app->input->getInt('id');
+		$pk  = $app->input->getInt('id');
 
 		if ($this->_item === null)
 		{

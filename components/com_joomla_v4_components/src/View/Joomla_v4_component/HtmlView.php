@@ -55,26 +55,26 @@ class HtmlView extends BaseHtmlView
 	 */
 	public function display($tpl = null)
 	{
-		$item = $this->item = $this->get('Item');
-		$state = $this->State = $this->get('State');
-		$params = $this->Params = $state->get('params');
+		$item       = $this->item = $this->get('Item');
+		$state      = $this->State = $this->get('State');
+		$params     = $this->Params = $state->get('params');
 		$itemparams = new Registry(json_decode($item->params));
 
 		$temp = clone $params;
 		$temp->merge($itemparams);
 		$item->params = $temp;
 
-		Factory::getApplication()->triggerEvent('onContentPrepare', array ('com_joomla_v4_components.joomla_v4_component', &$item));
+		Factory::getApplication()->triggerEvent('onContentPrepare', array('com_joomla_v4_components.joomla_v4_component', &$item));
 
 		// Store the events for later
-		$item->event = new \stdClass;
-		$results = Factory::getApplication()->triggerEvent('onContentAfterTitle', array('com_joomla_v4_components.joomla_v4_component', &$item, &$item->params));
+		$item->event                    = new \stdClass;
+		$results                        = Factory::getApplication()->triggerEvent('onContentAfterTitle', array('com_joomla_v4_components.joomla_v4_component', &$item, &$item->params));
 		$item->event->afterDisplayTitle = trim(implode("\n", $results));
 
-		$results = Factory::getApplication()->triggerEvent('onContentBeforeDisplay', array('com_joomla_v4_components.joomla_v4_component', &$item, &$item->params));
+		$results                           = Factory::getApplication()->triggerEvent('onContentBeforeDisplay', array('com_joomla_v4_components.joomla_v4_component', &$item, &$item->params));
 		$item->event->beforeDisplayContent = trim(implode("\n", $results));
 
-		$results = Factory::getApplication()->triggerEvent('onContentAfterDisplay', array('com_joomla_v4_components.joomla_v4_component', &$item, &$item->params));
+		$results                          = Factory::getApplication()->triggerEvent('onContentAfterDisplay', array('com_joomla_v4_components.joomla_v4_component', &$item, &$item->params));
 		$item->event->afterDisplayContent = trim(implode("\n", $results));
 
 		return parent::display($tpl);

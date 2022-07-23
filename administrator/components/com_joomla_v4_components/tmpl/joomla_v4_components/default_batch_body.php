@@ -8,25 +8,25 @@ $noUser    = true;
 ?>
 
 <div class="container">
-	<div class="row">
-		<div class="form-group col-md-6">
-			<div class="controls">
+    <div class="row">
+        <div class="form-group col-md-6">
+            <div class="controls">
 				<?php echo LayoutHelper::render('joomla.html.batch.language', []); ?>
-			</div>
-		</div>
-		<div class="form-group col-md-6">
-			<div class="controls">
+            </div>
+        </div>
+        <div class="form-group col-md-6">
+            <div class="controls">
 				<?php echo LayoutHelper::render('joomla.html.batch.access', []); ?>
-			</div>
-		</div>
-	</div>
-	<div class="row">
+            </div>
+        </div>
+    </div>
+    <div class="row">
 		<?php if ($published >= 0) : ?>
-			<div class="form-group col-md-6">
-				<div class="controls">
+            <div class="form-group col-md-6">
+                <div class="controls">
 					<?php echo LayoutHelper::render('joomla.html.batch.item', ['extension' => 'com_joomla_v4_components']); ?>
-				</div>
-			</div>
+                </div>
+            </div>
 		<?php endif; ?>
-	</div>
+    </div>
 </div>

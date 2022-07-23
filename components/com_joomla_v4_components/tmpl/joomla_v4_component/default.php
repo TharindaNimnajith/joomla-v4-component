@@ -10,10 +10,14 @@ defined('_JEXEC') or die;
 
 use Joomla\CMS\Language\Text;
 
-if ($this->item->params->get('show_name')) {
-	if ($this->Params->get('show_joomla_v4_component_name_label')) {
+if ($this->item->params->get('show_name'))
+{
+	if ($this->Params->get('show_joomla_v4_component_name_label'))
+	{
 		echo Text::_('COM_JOOMLA_V4_COMPONENTS_NAME') . $this->item->name;
-	} else {
+	}
+	else
+	{
 		echo $this->item->name;
 	}
 }

@@ -79,13 +79,13 @@ class Joomla_v4_componentField extends FormField
 		// Setup variables for display.
 		$linkJoomla_v4_components = 'index.php?option=com_joomla_v4_components&amp;view=joomla_v4_components&amp;layout=modal&amp;tmpl=component&amp;' . Session::getFormToken() . '=1';
 		$linkJoomla_v4_component  = 'index.php?option=com_joomla_v4_components&amp;view=joomla_v4_component&amp;layout=modal&amp;tmpl=component&amp;' . Session::getFormToken() . '=1';
-		$modalTitle   = Text::_('COM_JOOMLA_V4_COMPONENTS_CHANGE_JOOMLA_V4_COMPONENT');
+		$modalTitle               = Text::_('COM_JOOMLA_V4_COMPONENTS_CHANGE_JOOMLA_V4_COMPONENT');
 
 		if (isset($this->element['language']))
 		{
 			$linkJoomla_v4_components .= '&amp;forcedLanguage=' . $this->element['language'];
-			$linkJoomla_v4_component   .= '&amp;forcedLanguage=' . $this->element['language'];
-			$modalTitle     .= ' &#8212; ' . $this->element['label'];
+			$linkJoomla_v4_component  .= '&amp;forcedLanguage=' . $this->element['language'];
+			$modalTitle               .= ' &#8212; ' . $this->element['label'];
 		}
 
 		$urlSelect = $linkJoomla_v4_components . '&amp;function=jSelectJoomla_v4_component_' . $this->id;
@@ -112,7 +112,7 @@ class Joomla_v4_componentField extends FormField
 		$title = empty($title) ? Text::_('COM_JOOMLA_V4_COMPONENTS_SELECT_A_JOOMLA_V4_COMPONENT') : htmlspecialchars($title, ENT_QUOTES, 'UTF-8');
 
 		// The current joomla_v4_component display field.
-		$html  = '';
+		$html = '';
 
 		if ($allowSelect || $allowNew || $allowEdit || $allowClear)
 		{
@@ -164,14 +164,14 @@ class Joomla_v4_componentField extends FormField
 				'bootstrap.renderModal',
 				'ModalSelect' . $modalId,
 				array(
-					'title'       => $modalTitle,
-					'url'         => $urlSelect,
-					'height'      => '400px',
-					'width'       => '800px',
-					'bodyHeight'  => 70,
-					'modalWidth'  => 80,
-					'footer'      => '<a role="button" class="btn btn-secondary" data-dismiss="modal" aria-hidden="true">'
-										. Text::_('JLIB_HTML_BEHAVIOR_CLOSE') . '</a>',
+					'title'      => $modalTitle,
+					'url'        => $urlSelect,
+					'height'     => '400px',
+					'width'      => '800px',
+					'bodyHeight' => 70,
+					'modalWidth' => 80,
+					'footer'     => '<a role="button" class="btn btn-secondary" data-dismiss="modal" aria-hidden="true">'
+						. Text::_('JLIB_HTML_BEHAVIOR_CLOSE') . '</a>',
 				)
 			);
 		}

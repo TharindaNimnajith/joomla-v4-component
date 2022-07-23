@@ -52,8 +52,8 @@ class HtmlView extends BaseHtmlView
 	 *
 	 * @return  mixed  A string if successful, otherwise an Error object.
 	 *
-	 * @since   1.0.0
 	 * @throws  Exception
+	 * @since   1.0.0
 	 */
 	public function display($tpl = null)
 	{
@@ -83,8 +83,8 @@ class HtmlView extends BaseHtmlView
 	 *
 	 * @return  void
 	 *
-	 * @since   1.0.0
 	 * @throws  Exception
+	 * @since   1.0.0
 	 */
 	private function addToolbar(): void
 	{

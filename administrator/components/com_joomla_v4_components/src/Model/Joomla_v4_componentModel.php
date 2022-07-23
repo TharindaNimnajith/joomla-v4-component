@@ -67,8 +67,8 @@ class Joomla_v4_componentModel extends AdminModel
 	 *
 	 * @return  Form|boolean  A \JForm object on success, false on failure
 	 *
-	 * @since   1.0.0
 	 * @throws  Exception
+	 * @since   1.0.0
 	 */
 	public function getForm($data = array(), $loadData = true)
 	{
@@ -89,8 +89,8 @@ class Joomla_v4_componentModel extends AdminModel
 	 *
 	 * @return  mixed  The data for the form.
 	 *
-	 * @since   1.0.0
 	 * @throws  Exception
+	 * @since   1.0.0
 	 */
 	protected function loadFormData()
 	{
@@ -110,8 +110,8 @@ class Joomla_v4_componentModel extends AdminModel
 	 *
 	 * @return  mixed  Object on success, false on failure.
 	 *
-	 * @since   1.0.0
 	 * @throws  Exception
+	 * @since   1.0.0
 	 */
 	public function getItem($pk = null)
 	{
@@ -149,8 +149,8 @@ class Joomla_v4_componentModel extends AdminModel
 	 *
 	 * @return  void
 	 *
-	 * @since   1.0.0
 	 * @throws  Exception
+	 * @since   1.0.0
 	 */
 	protected function preprocessForm(\JForm $form, $data, $group = 'content')
 	{

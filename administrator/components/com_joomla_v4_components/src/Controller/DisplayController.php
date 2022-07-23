@@ -36,9 +36,9 @@ class DisplayController extends BaseController
 	 *
 	 * @return  BaseController|bool  This object to support chaining.
 	 *
+	 * @throws  \Exception
 	 * @since   1.0.0
 	 *
-	 * @throws  \Exception
 	 */
 	public function display($cachable = false, $urlparams = array())
 	{

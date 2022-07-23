@@ -65,7 +65,7 @@ class Joomla_v4_componentTable extends Table implements TaggableTableInterface
 		// Transform the params field
 		if (is_array($this->params))
 		{
-			$registry = new Registry($this->params);
+			$registry     = new Registry($this->params);
 			$this->params = (string) $registry;
 		}
 

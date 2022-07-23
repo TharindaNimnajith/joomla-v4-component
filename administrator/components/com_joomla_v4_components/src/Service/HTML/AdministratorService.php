@@ -47,7 +47,7 @@ class AdministratorService
 			}
 
 			// Get the associated joomla_v4_component items
-			$db = Factory::getDbo();
+			$db    = Factory::getDbo();
 			$query = $db->getQuery(true)
 				->select('c.id, c.name as title')
 				->select('l.sef as lang_sef, lang_code')
@@ -74,8 +74,8 @@ class AdministratorService
 			{
 				foreach ($items as &$item)
 				{
-					$text = strtoupper($item->lang_sef);
-					$url = Route::_('index.php?option=com_contact&task=contact.edit&id=' . (int) $item->id);
+					$text    = strtoupper($item->lang_sef);
+					$url     = Route::_('index.php?option=com_contact&task=contact.edit&id=' . (int) $item->id);
 					$tooltip = '<strong>' . htmlspecialchars($item->language_title, ENT_QUOTES, 'UTF-8') . '</strong><br>'
 						. htmlspecialchars($item->title, ENT_QUOTES, 'UTF-8') . '<br>' . Text::sprintf('JCATEGORY_SPRINTF', $item->category_title);
 					$classes = 'badge badge-secondary';

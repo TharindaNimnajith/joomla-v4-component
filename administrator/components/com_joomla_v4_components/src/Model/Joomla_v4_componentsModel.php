@@ -71,7 +71,7 @@ class Joomla_v4_componentsModel extends ListModel
 	protected function getListQuery()
 	{
 		// Create a new query object.
-		$db = $this->getDbo();
+		$db    = $this->getDbo();
 		$query = $db->getQuery(true);
 
 		// Select the required fields from the table.
@@ -198,7 +198,7 @@ class Joomla_v4_componentsModel extends ListModel
 		}
 
 		// Add the list ordering clause.
-		$orderCol = $this->state->get('list.ordering', 'a.name');
+		$orderCol  = $this->state->get('list.ordering', 'a.name');
 		$orderDirn = $this->state->get('list.direction', 'asc');
 
 		if ($orderCol == 'a.ordering' || $orderCol == 'category_title')
