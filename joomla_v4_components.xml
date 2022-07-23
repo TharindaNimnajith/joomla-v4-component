@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<extension type="component" method="upgrade">
+	<name>COM_JOOMLA_V4_COMPONENTS</name>
+	<creationDate>7/24/2022</creationDate>
+	<author>ASUS</author>
+	<authorEmail>your@email.com</authorEmail>
+	<authorUrl>http://your.url.com</authorUrl>
+	<copyright>A copyright</copyright>
+	<license>GNU General Public License version 2 or later;</license>
+	<version>1.0.0</version>
+	<description>COM_JOOMLA_V4_COMPONENTS_XML_DESCRIPTION</description>
+	<namespace path="src">Joomla\Component\Joomla_v4_components</namespace>
+	<scriptfile>script.php</scriptfile>
+	<install> <!-- Runs on install -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+	<uninstall> <!-- Runs on uninstall -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+	<update>  <!-- Runs on update -->
+		<schemas>
+			<schemapath type="mysql">sql/updates/mysql</schemapath>
+		</schemas>
+	</update>
+	<!-- Frond-end files -->
+	<files folder="components/com_joomla_v4_components">
+		<folder>language</folder>
+		<folder>src</folder>
+		<folder>tmpl</folder>
+	</files>
+    <media folder="media/com_joomla_v4_components" destination="com_joomla_v4_components">
+		<folder>js</folder>
+    </media>
+	<!-- Back-end files -->
+	<administration>
+		<!-- Menu entries -->
+		<menu view="joomla_v4_components">COM_JOOMLA_V4_COMPONENTS</menu>
+		<submenu>
+			<menu link="option=com_joomla_v4_components">COM_JOOMLA_V4_COMPONENTS</menu>
+			<submenu>
+			<menu link="option=com_categories&amp;extension=com_joomla_v4_components"
+				view="joomla_v4_components" img="class:joomla_v4_components-cat" alt="Joomla_v4_components/Categories">JCATEGORY</menu>
+			</submenu>
+		</submenu>
+		<files folder="administrator/components/com_joomla_v4_components">
+			<filename>access.xml</filename>
+			<filename>joomla_v4_components.xml</filename>
+			<filename>config.xml</filename>
+			<folder>forms</folder>
+			<folder>language</folder>
+			<folder>services</folder>
+			<folder>sql</folder>
+			<folder>src</folder>
+			<folder>tmpl</folder>
+		</files>
+	</administration>
+	<changelogurl>https://raw.githubusercontent.com/astridx/boilerplate/tutorial/changelog.xml</changelogurl>
+	<updateservers>
+		<server type="extension" name="Joomla_v4_component Updates">https://raw.githubusercontent.com/astridx/boilerplate/tutorial/joomla_v4_component_update.xml</server>
+	</updateservers>
+	<dlid prefix="dlid=" suffix="" />
+</extension>
