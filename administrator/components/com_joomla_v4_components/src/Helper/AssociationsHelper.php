@@ -170,32 +170,6 @@ class AssociationsHelper extends AssociationExtensionHelper
 	}
 
 	/**
-	 * Get default values for fields array
-	 *
-	 * @return  array
-	 *
-	 * @since   1.0.0
-	 */
-	protected function getFieldsTemplate()
-	{
-		return [
-			'id'       => 'a.id',
-			'title'    => 'a.title',
-			'alias'    => 'a.alias',
-			//	'ordering'            => 'a.ordering',
-			'menutype' => '',
-			'level'    => '',
-			'catid'    => 'a.catid',
-			'language' => 'a.language',
-			'access'   => 'a.access',
-			'state'    => 'a.state',
-			//	'created_user_id'     => 'a.created_by',
-			//	'checked_out'         => 'a.checked_out',
-			//	'checked_out_time'    => 'a.checked_out_time'
-		];
-	}
-
-	/**
 	 * Get item information
 	 *
 	 * @param   string  $typeName  The item type
@@ -234,6 +208,32 @@ class AssociationsHelper extends AssociationExtensionHelper
 		$table->load($id);
 
 		return $table;
+	}
+
+	/**
+	 * Get default values for fields array
+	 *
+	 * @return  array
+	 *
+	 * @since   1.0.0
+	 */
+	protected function getFieldsTemplate()
+	{
+		return [
+			'id'       => 'a.id',
+			'title'    => 'a.title',
+			'alias'    => 'a.alias',
+			//	'ordering'            => 'a.ordering',
+			'menutype' => '',
+			'level'    => '',
+			'catid'    => 'a.catid',
+			'language' => 'a.language',
+			'access'   => 'a.access',
+			'state'    => 'a.state',
+			//	'created_user_id'     => 'a.created_by',
+			//	'checked_out'         => 'a.checked_out',
+			//	'checked_out_time'    => 'a.checked_out_time'
+		];
 	}
 }
 

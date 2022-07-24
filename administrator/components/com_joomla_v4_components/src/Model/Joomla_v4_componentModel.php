@@ -85,25 +85,6 @@ class Joomla_v4_componentModel extends AdminModel
 	}
 
 	/**
-	 * Method to get the data that should be injected in the form.
-	 *
-	 * @return  mixed  The data for the form.
-	 *
-	 * @throws  Exception
-	 * @since   1.0.0
-	 */
-	protected function loadFormData()
-	{
-		$app = Factory::getApplication();
-
-		$data = $this->getItem();
-
-		$this->preprocessData('com_joomla_v4_components.joomla_v4_component', $data);
-
-		return $data;
-	}
-
-	/**
 	 * Method to get a single record.
 	 *
 	 * @param   integer  $pk  The id of the primary key.
@@ -138,6 +119,25 @@ class Joomla_v4_componentModel extends AdminModel
 		}
 
 		return $item;
+	}
+
+	/**
+	 * Method to get the data that should be injected in the form.
+	 *
+	 * @return  mixed  The data for the form.
+	 *
+	 * @throws  Exception
+	 * @since   1.0.0
+	 */
+	protected function loadFormData()
+	{
+		$app = Factory::getApplication();
+
+		$data = $this->getItem();
+
+		$this->preprocessData('com_joomla_v4_components.joomla_v4_component', $data);
+
+		return $data;
 	}
 
 	/**
